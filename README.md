@@ -47,9 +47,11 @@ like this in your .xinitrc:
 Configuration
 -------------
 The configuration of dwm is done by creating a custom config.h
-a
+
 
 ------------- ------------- ------------- ------------- ------------- ------------- ------------- -------------
 # arco-dwm
 ![ArcoLinux_2022-08-08_21-10-00](https://user-images.githubusercontent.com/101618848/183442530-a559d4d2-6eb1-462e-89f3-12336234507b.png)
+
+After the main installation of DWM, you can just simply git clone my configurations.
 
