@@ -74,9 +74,9 @@ super + c
 super + h
     urxvt 'htop task manager' -e htop
 
-#arcolinux-logout
-super + :
-    arcolinux-logout
+#archlinux-logout
+super + x
+    archlinux-logout
 
 #Rofi theme selector
 super + alt + r
