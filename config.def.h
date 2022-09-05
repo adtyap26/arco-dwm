@@ -11,7 +11,7 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "Hack Nerd Font:weight=bold:size=8:antialias=true:hinting=true" };
+static const char *fonts[]          = { "Hack Nerd Font:weight=bold:size=8:antialias=true:hinting=true", "NotoColorEmoji:weight=bold:size=8:antialias=true:hinting=true" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -60,7 +60,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
@@ -135,7 +135,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Left,   tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_Right,  tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_r,      self_restart,   {0} },
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {1}},
 	{ Mod1Mask|ControlMask,         XK_Right,  shiftview,      {.i =  1 } },
 	{ Mod1Mask|ControlMask,         XK_Left,   shiftview,      {.i = -1 } },
 	{ Mod1Mask|ControlMask,         XK_Up,     shiftview,      {.i =  1 } },
