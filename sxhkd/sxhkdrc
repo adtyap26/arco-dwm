@@ -94,7 +94,7 @@ super + v
 super + m
     pragha
 
-#alacritty
+#ST
 super + Return
     st
 
@@ -153,9 +153,6 @@ ctrl + alt + Next
 ctrl + alt + Prior
     conky-rotate -p
 
-#File-Manager
-ctrl + alt + b
-     thunar
 
 #Catfish
 ctrl + alt + c
@@ -173,13 +170,6 @@ ctrl + alt + f
 ctrl + alt + i
      nitrogen
 
-#arcolinux-logout
-ctrl + alt + k
-     arcolinux-logout
-
-#arcolinux-logout
-ctrl + alt + l
-    arcolinux-logout
 
 #Pamac-manager
 ctrl + alt + p
@@ -324,13 +314,15 @@ ctrl + shift + Print
 
 
 #################################################################
-#     FUNCTION KEYS
+#     PANEL KEYS
 #################################################################
 
-#xfce4-terminal dropdown
-F12
-    xfce4-terminal --drop-down
+#xfce4-panel
+super + alt + o 
+     xfce4-panel
 
+super + alt + k
+    pkill xfce4-panel 
 
 #################################################################
 #     MULTIMEDIA KEYS
@@ -380,6 +372,14 @@ XF86MonBrightnessUp
 #Brightness down
 XF86MonBrightnessDown
     xbacklight -dec 10
+
+#Brightness up sh
+super + ctrl + + SHIFT + p
+    /home/permaditya/Scripts/brightness.sh +10
+
+#Brightness down sh
+super + ctrl + SHIFT + l 
+   /home/permaditya/Scripts/brightness.sh -10
 
 #########################
 #        POLYBAR        #
@@ -462,11 +462,11 @@ super + ctrl + space
 
 #Reload bspwm
 super + shift + r
-	~/.config/bspwm/bspwmrc
+#~/.config/bspwm/bspwmrc
 
 #kill
-super + shift + q
-	bspc node -c
+#super + shift + q
+	#bspc node -c
 
 #Logout
 #super + shift + x
