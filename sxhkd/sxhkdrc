@@ -38,7 +38,7 @@ super + F7
 super + F8
     thunar
 
-#Evolution
+#Evolutionsh
 super + F9
     evolution
 
@@ -53,6 +53,14 @@ super + F11
 #Rofi
 super + r
     rofi -show drun
+
+#Screen record
+super + shift + p
+    ~/Scripts/dmenu_record
+
+#Screen Record II
+super + shift + o
+   ~/Scripts/screen-recorder.sh
 
 #################################################################
 # SUPER + ... KEYS
@@ -366,19 +374,19 @@ XF86AudioStop
     playerctl stop
 
 #Brightness up
-XF86MonBrightnessUp
-    xbacklight -inc 10
+#XF86MonBrightnessUp
+#    xbacklight -inc 10
 
 #Brightness down
-XF86MonBrightnessDown
-    xbacklight -dec 10
+#XF86MonBrightnessDown
+#    xbacklight -dec 10
 
 #Brightness up sh
-super + ctrl + + SHIFT + p
+#super + ctrl + SHIFT + p
     /home/permaditya/Scripts/brightness.sh +10
 
 #Brightness down sh
-super + ctrl + SHIFT + l 
+#super + ctrl + SHIFT + l 
    /home/permaditya/Scripts/brightness.sh -10
 
 #########################
