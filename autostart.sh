@@ -17,8 +17,8 @@ run "dex $HOME/.config/autostart/arcolinux-welcome-app.desktop"
 #run xrandr --output HDMI2 --right-of HDMI1 --auto
 #autorandr horizontal
 
-run "nm-applet"
-run "pamac-tray"
+# run "nm-applet"
+# run "pamac-tray"
 #run "variety"
 #run "xfce4-power-manager"
 #run "blueberry-tray"
@@ -26,8 +26,9 @@ run "/usr/lib/xfce4/notifyd/xfce4-notifyd"
 run "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 picom -b  --config ~/.config/arco-dwm/picom.conf &
 run "numlockx on"
-run "volumeicon"
-run "dwmblocks" &
+# run "volumeicon"
+# run "dwmblocks"
+run "slstatus" &
 sxhkd -c ~/.config/arco-dwm/sxhkd/sxhkdrc &
 #run "nitrogen --restore"
 #run "conky -c $HOME/.config/arco-dwm/system-overview"

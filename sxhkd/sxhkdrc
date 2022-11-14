@@ -132,6 +132,10 @@ super + shift + t
 super + shift + m
 	dmenu_run -i -nb '#191919' -nf '#99D1CE' -sb '#924441' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
+#dm-wifi
+super + shift + w 
+ /usr/bin/dm-wifi 
+
 #reload sxhkd:
 super + shift + s
 	pkill -USR1 -x sxhkd
