@@ -54,7 +54,7 @@ static const Rule rules[] = {
 	 */
 	/* class                       instance              title              tags mask         isfloating            monitor */
 	{ "Gimp",                      NULL,                 NULL,                  0,              0,                      -1 },
-	{ "St",                        NULL,               "st-256color",        1 << 1,            1,                       1 },
+	{ "St",                        NULL,               "st-256color",           1,              1,                       1 },
 	{ "Google Chrome",             NULL,                 NULL,                  0,              0,                       1 },
 	{ "Archlinux Logout",          NULL,               "Archlinux Logout",     1 << 6,          True,                  -1 },
 };
@@ -90,16 +90,23 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_red, "-sf", col_gray4, NULL };
 static const char *filecmd[]  = { "thunar", NULL };
-static const char *wifi[]  = { "nmtui", NULL };
 static const char *taskmanager[]  = { "xfce4-taskmanager", NULL };
 static const char *calendar[]  = { "gsimplecal", NULL };
+static const char *upvol[] = { "/usr/bin/amixer", "set", "Master", "5%+", NULL };
+static const char *downvol[] = { "/usr/bin/amixer", "set", "Master", "5%-", NULL };
+static const char *mutevol[] = { "/usr/bin/amixer", "set", "Master", "toggle", NULL };
 
 #include "selfrestart.c"
 #include "shiftview.c"
+#include <X11/XF86keysym.h>
 
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+/* Add to keys[] array. With 0 as modifier, you are able to use the keys directly. */
+	{ 0, XF86XK_AudioLowerVolume,              spawn,          {.v = downvol } },
+	{ 0, XF86XK_AudioMute,                     spawn,          {.v = mutevol } },
+	{ 0, XF86XK_AudioRaiseVolume,              spawn,          {.v = upvol   } },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = filecmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },

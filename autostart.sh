@@ -27,8 +27,8 @@ run "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 picom -b  --config ~/.config/arco-dwm/picom.conf &
 run "numlockx on"
 # run "volumeicon"
-# run "dwmblocks"
-run "slstatus" &
+run "dwmblocks" &
+# run "slstatus" &
 sxhkd -c ~/.config/arco-dwm/sxhkd/sxhkdrc &
 #run "nitrogen --restore"
 #run "conky -c $HOME/.config/arco-dwm/system-overview"
