@@ -340,24 +340,23 @@ super + alt + k
 #     MULTIMEDIA KEYS
 #################################################################
 #
-# #Raises volume
-# XF86AudioRaiseVolume
-#     amixer set Master 10%+
+# # #Raises volume
+#  super + ctrl + k
+# #
+# # #Lowers volume
+#  super + ctrl + l
+#      amixer set Master 5%-; pkill -RTMIN+10 dwmblocks
 #
-# #Lowers volume
-# XF86AudioLowerVolume
-#     amixer set Master 10%-
 #
 # #Mute
 # XF86AudioMute
 #     amixer -D pulse set Master 1+ toggle
 #Raises mic Volume
 super + ctrl + alt + +
-    amixer set Capture 10%+
+    amixer set Capture 10%+; 
 
 super + ctrl + alt + -
-    amixer set Capture 10%-
-#
+    amixer set Capture 10%-; 
 #Playerctl works for Pragha, Spotify and others
 #Delete the line for playerctl if you want to use mpc
 #and replace it with the corresponding code
@@ -393,15 +392,18 @@ XF86AudioStop
 
 #Brightness up sh
 #super + ctrl + SHIFT + p
-    /home/permaditya/Scripts/brightness.sh +10
 
 #Brightness down sh
 #super + ctrl + SHIFT + l 
-   /home/permaditya/Scripts/brightness.sh -10
 
 #########################
-#        POLYBAR        #
+#        DWMBLOCKS        #
 #########################
+
+#kill DWMBlocks
+super + k
+   ~/Scripts/killdwmblock.sh
+
 
 #Hide polybar
 super + y

@@ -93,8 +93,8 @@ static const char *filecmd[]  = { "thunar", NULL };
 static const char *taskmanager[]  = { "xfce4-taskmanager", NULL };
 static const char *calendar[]  = { "gsimplecal", NULL };
 static const char *upvol[] = { "/usr/bin/amixer", "set", "Master", "5%+", NULL };
-static const char *downvol[] = { "/usr/bin/amixer", "set", "Master", "5%-", NULL };
-static const char *mutevol[] = { "/usr/bin/amixer", "set", "Master", "toggle", NULL };
+static const char *downvol[] = { "/usr/bin/amixer", "set", "Master", "5%-",  NULL };
+static const char *mutevol[] = { "/usr/bin/amixer", "set", "Master", "toggle",  NULL };
 
 #include "selfrestart.c"
 #include "shiftview.c"
