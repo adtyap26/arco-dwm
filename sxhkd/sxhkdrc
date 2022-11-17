@@ -98,9 +98,6 @@ super + t
 super + v
     pavucontrol
 
-#Pragha
-super + m
-    pragha
 
 #ST
 super + Return
@@ -130,7 +127,7 @@ super + shift + t
 
 #dmenu
 super + shift + m
-	dmenu_run -i -nb '#191919' -nf '#99D1CE' -sb '#924441' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+	dmenu_run -i -nb '#191919' -nf '#eeeeee' -sb '#924441' -sf '#191919' -fn 'NotoMonoRegular:pixelsize=12'
 
 #dm-wifi
 super + shift + w 
@@ -341,21 +338,22 @@ super + alt + k
 #################################################################
 #
 # # #Raises volume
-#  super + ctrl + k
-# #
+XF86AudioRaiseVolume
+    /usr/local/bin/volume.sh up
+
 # # #Lowers volume
-#  super + ctrl + l
-#      amixer set Master 5%-; pkill -RTMIN+10 dwmblocks
-#
-#
-# #Mute
-# XF86AudioMute
-#     amixer -D pulse set Master 1+ toggle
+XF86AudioLowerVolume
+    /usr/local/bin/volume.sh down
+
+   #Mute
+XF86AudioMute
+    /usr/local/bin/volume.sh mute
+
 #Raises mic Volume
-super + ctrl + alt + +
+super + ctrl + alt + o
     amixer set Capture 10%+; 
 
-super + ctrl + alt + -
+super + ctrl + alt + p
     amixer set Capture 10%-; 
 #Playerctl works for Pragha, Spotify and others
 #Delete the line for playerctl if you want to use mpc
@@ -401,7 +399,7 @@ XF86AudioStop
 #########################
 
 #kill DWMBlocks
-super + k
+super + ctrl + m
    ~/Scripts/killdwmblock.sh
 
 
