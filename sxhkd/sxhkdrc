@@ -339,22 +339,31 @@ super + alt + k
 #
 # # #Raises volume
 XF86AudioRaiseVolume
-    /usr/local/bin/volume.sh up
+    /usr/local/bin/volume.sh up; \
+   ~/Scripts/killdwmblock.sh
+
 
 # # #Lowers volume
 XF86AudioLowerVolume
-    /usr/local/bin/volume.sh down
+    /usr/local/bin/volume.sh down; \
+   ~/Scripts/killdwmblock.sh
+  
 
-   #Mute
+  #Mute
 XF86AudioMute
-    /usr/local/bin/volume.sh mute
+    /usr/local/bin/volume.sh mute; \
+   ~/Scripts/killdwmblock.sh
 
 #Raises mic Volume
 super + ctrl + alt + o
-    amixer set Capture 10%+; 
+    amixer set Capture 10%+; \
+   ~/Scripts/killdwmblock.sh
+    
 
 super + ctrl + alt + p
-    amixer set Capture 10%-; 
+    amixer set Capture 10%-; \
+   ~/Scripts/killdwmblock.sh
+
 #Playerctl works for Pragha, Spotify and others
 #Delete the line for playerctl if you want to use mpc
 #and replace it with the corresponding code
