@@ -53,11 +53,25 @@ static const Rule rules[] = {
 	 *  use tags mask to point an application to a specific workspace
 	 */
 	/* class                       instance              title              tags mask         isfloating            monitor */
-	{ "Gimp",                      NULL,                 NULL,                  0,              0,                      -1 },
-	{ "St",                        NULL,               "st-256color",           1,              1,                       1 },
-	{ "Google Chrome",             NULL,                 NULL,                  0,              0,                       1 },
-	{ "Archlinux Logout",          NULL,               "Archlinux Logout",     1 << 6,          True,                  -1 },
-};
+    { "Google-chrome",        NULL,                 NULL,                         1,             0,            0,           -1 },
+    { "TelegramDesktop",      NULL,                 NULL,                         1 << 4,        0,            0,           -1 },
+    { "discord",              NULL,                 NULL,                         1 << 4,        0,            0,           -1 },
+    { "Thunderbird",          NULL,                 NULL,                         1 << 6,        0,            0,           -1 },
+    { "mpv",                  NULL,                 NULL,                         1 << 4,        0,            0,           -1 },
+    { NULL,                   "libreoffice",        NULL,                         1 << 3,        0,            0,           -1 },
+    { "Thunar",               "thunar",             NULL,                         1 << 5,        0,            0,           -1 },
+    { "St",                   NULL,                 "st",                         0,             1,            0,           -1 },
+    { "St",                   NULL,                 "Neomutt",                    1 << 6,        0,            0,           -1 },
+    { "St",                   NULL,                 "Ranger",                     0,             0,            0,           -1 },
+    { "Postman",              NULL,                 NULL,                         0,             0,            0,           -1 },
+    { "vlc",                  NULL,                 NULL,                         1 << 4,        0,            0,           -1 },
+    { "Evince",               NULL,                 "Recent Documents",           1 << 4,        0,            0,           -1 },
+    /* class                  instance              title                         tags mask      iscentered    isfloating   monitor */
+    /* Floating */
+    { "SimpleScreenRecorder", NULL,                 NULL,                         0,             1,            1,           -1 },
+    { "Thunar",               "thunar",             "File Operation Progress",    0,             0,            1,           -1 },
+    { "GParted",              NULL,                 NULL,                         0,             1,            1,           -1 },
+  };
 
 /* layout(s) */
 static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
