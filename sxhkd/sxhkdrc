@@ -78,9 +78,6 @@ super + w
 super + c
     conky-toggle
 
-#Htop
-super + h
-    urxvt 'htop task manager' -e htop
 
 #archlinux-logout
 super + x
@@ -128,6 +125,11 @@ super + shift + t
 #dmenu
 super + shift + m
 	dmenu_run -i -nb '#191919' -nf '#eeeeee' -sb '#924441' -sf '#191919' -fn 'NotoMonoRegular:pixelsize=12'
+
+#dm-scripts
+super + ctrl + h
+  /usr/bin/dm-hub
+
 
 #dm-wifi
 super + shift + w 
