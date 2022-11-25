@@ -56,11 +56,16 @@ super + r
 
 #Screen record
 super + shift + p
-    ~/Scripts/dmenu_record
+    /usr/bin/dm_record
 
 #Screen Record II
 super + shift + o
    ~/Scripts/screen-recorder.sh
+
+#Screen Record III
+super + shift + i
+  ~/Scripts/dmenu_record
+
 
 #################################################################
 # SUPER + ... KEYS
@@ -74,14 +79,10 @@ super + e
 super + w
     google-chrome-stable
 
-#Conky-toggle
-super + c
-    conky-toggle
 
-
-#archlinux-logout
+#logout
 super + x
-    archlinux-logout
+    /usr/bin/dm-logout
 
 #Rofi theme selector
 super + alt + r
@@ -120,7 +121,7 @@ super + shift + t
 #Keyboard dependent
 #File-Manager
 #super + shift + KP_Enter
-#	thunar
+#	thunarc
 
 #dmenu
 super + shift + m
@@ -130,10 +131,17 @@ super + shift + m
 super + ctrl + h
   /usr/bin/dm-hub
 
+#dm-youtube
+super + shift + y
+ /usr/bin/ytfzf -D
 
 #dm-wifi
 super + shift + w 
- /usr/bin/dm-wifi 
+ /usr/bin/dm-wifi
+
+#dm-websearch
+super + shift + ctrl + w
+ /usr/bin/dm-websearch
 
 #reload sxhkd:
 super + shift + s
